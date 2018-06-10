@@ -4,11 +4,24 @@ services:
 
   archiva:
     image: robobeerun/archiva:latest
+    links:
+      - db
     environment:
       DEBUG: "true"
+      DB_TYPE: "mysql"
     volumes:
       - "./root/html:/var/www/html"
       - "./root/data:/data"
+
+  db:
+    image: bitnami/mariadb:10.2.14-r6
+    environment:
+      ALLOW_EMPTY_PASSWORD: "yes"
+      MARIADB_USER: "archiva"
+      MARIADB_PASSWORD: "archiva"
+      MARIADB_DATABASE: "archiva_users"
+    volumes:
+      - "./root/db:/bitnami/mariadb"
 
   nginx:
     image: robobeerun/nginx:latest

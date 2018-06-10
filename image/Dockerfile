@@ -20,6 +20,8 @@ RUN set -x \
 ENV DEBUG="true" \
   WEB_ROOT="/var/www/html" \
   ARCHIVA_SOURCE_DIR="/usr/src/archiva" \
+  ARCHIVA_REQUEST_LOG_DIR="/var/log/archiva" \
+  ARCHIVA_JETTY_LOGS_PATTERN="request-yyyy_mm_dd.log" \
   JAVA_INITIAL_MEMORY="500" \
   JAVA_MAX_MEMORY="500" \
   JAVA_MAX_PERM_SIZE="128m" \
@@ -37,15 +39,19 @@ RUN set -x \
   && mkdir -p /data
 
 RUN set -x \
-  && ls -l / \
+  # install archiva
   && mkdir -p "${ARCHIVA_SOURCE_DIR}" \
   && cd "${ARCHIVA_SOURCE_DIR}" \
   && wget -O "/tmp/apache-archiva-2.2.3-bin.tar.gz.sha256" "http://www.apache.org/dist/archiva/2.2.3/binaries/apache-archiva-2.2.3-bin.tar.gz.sha256" \
   && /install-app.sh "http://www-us.apache.org/dist/archiva/2.2.3/binaries/apache-archiva-2.2.3-bin.tar.gz" "/tmp/apache-archiva-2.2.3-bin.tar.gz.sha256" \
-  && chown www-data.www-data -R "/data" \
-  && chown www-data.www-data -R "${ARCHIVA_SOURCE_DIR}"
+  # create directories
+  && for d in "/data" "${ARCHIVA_SOURCE_DIR}" "${ARCHIVA_REQUEST_LOG_DIR}"; do \
+  mkdir -p "${d}" && \
+  chown www-data.root -R "${d}" && \
+  chmod u=rwX,g=rwX,o=rX -R "${d}"; \
+  done
 
-VOLUME ["/data"]
+VOLUME ["/data", "/var/www/html"]
 
 USER www-data
 

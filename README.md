@@ -15,10 +15,12 @@
 
 | Variable | Default | Description |
 | ------------- | ------------- | ----- |
-| DB_TYPE | derby | Database type: derby or mysql. |
+| ARCHIVA_REQUEST_LOG_DIR | `/var/log/archiva` | Request log directory. |
+| ARCHIVA_JETTY_LOGS_PATTERN | `request-yyyy_mm_dd.log` | Jetty logs pattern. |
 | JAVA_INITIAL_MEMORY | 500 | Initial Java heap memory. |
 | JAVA_MAX_MEMORY | 500 | Maximum Java heap memory. |
 | JAVA_MAX_PERM_SIZE | 128m | Maximum Java perm memory. |
+| DB_TYPE | derby | Database type: derby or mysql. |
 
 If database type is set to `mysql`:
 

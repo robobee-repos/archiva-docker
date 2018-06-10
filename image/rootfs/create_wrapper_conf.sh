@@ -1,7 +1,6 @@
 #!/bin/bash
 set -e
 
-LIB_DIR="${ARCHIVA_SOURCE_DIR}/archiva/lib"
 WRAPPER_CONF_FILE="${ARCHIVA_SOURCE_DIR}/archiva/conf/wrapper.conf"
 
 cat > "${WRAPPER_CONF_FILE}" <<EOF
@@ -51,7 +50,6 @@ wrapper.java.classpath.26=%REPO_DIR%/tomcat-juli-7.0.54.jar
 EOF
 
 if [[ "${DB_TYPE}" == "mysql" ]]; then
-    wget -O "${LIB_DIR}/mysql-connector-java-8.0.11.jar" "http://search.maven.org/remotecontent?filepath=mysql/mysql-connector-java/8.0.11/mysql-connector-java-8.0.11.jar"
     cat >> "${WRAPPER_CONF_FILE}" <<EOF
 wrapper.java.classpath.27=%REPO_DIR%/mysql-connector-java-8.0.11.jar
 EOF

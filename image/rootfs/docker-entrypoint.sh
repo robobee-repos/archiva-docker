@@ -6,6 +6,8 @@ set_debug
 echo "Running as `id`"
 
 $BASH_CMD /create_wrapper_conf.sh
+$BASH_CMD /create_jetty_xml.sh
+$BASH_CMD /install_database.sh
 
 copy_files "/conf-in" "${WEB_ROOT}/conf" "*.xml"
 copy_files "/conf-in" "${WEB_ROOT}/conf" "*.conf"
