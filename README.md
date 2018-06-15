@@ -2,6 +2,8 @@
 
 ## Description
 
+* https://archiva.apache.org
+
 > Apache Archiva™ is an extensible repository management software that helps taking care of your own personal or enterprise-wide build artifact repository. It is the perfect companion for build tools such as Maven, Continuum, and ANT. 
 
 ### Key Features
@@ -42,16 +44,16 @@ If database type is set to `mysql`:
 
 | Path | Description |
 | ------------- | ----- |
-| /var/www/html  | www-root directory. |
-| /data | Archiva data directory. |
+| `/var/www/html`  | www-root directory. |
+| `/data` | Archiva data directory. |
 
 ## Input Configration
 
 | Source | Destination |
 | ------------- | ------------- |
-| /conf-in/*.xml | /var/www/html/conf |
-| /conf-in/*.conf | /var/www/html/conf |
-| /lib-in/*.jar | /var/www/html/lib |
+| `/conf-in/*.xml` | `/var/www/html/conf` |
+| `/conf-in/*.conf` | `/var/www/html/conf` |
+| `/lib-in/*.jar` | `/var/www/html/lib` |
 
 ## Test
 

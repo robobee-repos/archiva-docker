@@ -2,6 +2,8 @@ h1(#apache-archiva). Apache Archiva
 
 h2(#description). Description
 
+* https://archiva.apache.org
+
 bq. Apache Archiva™ is an extensible repository management software that helps taking care of your own personal or enterprise&#45;wide build artifact repository. It is the perfect companion for build tools such as Maven, Continuum, and ANT.
 
 
@@ -40,14 +42,15 @@ h2(#exposed-ports). Exposed Ports
 h2(#directories). Directories
 
 |_. Path|_. Description|
-|/var/www/html|www&#45;root directory.|
-|/data|Archiva data directory.|
+|@/var/www/html@|www&#45;root directory.|
+|@/data@|Archiva data directory.|
 
 h2(#input-configration). Input Configration
 
 |_. Source|_. Destination|
-|/conf&#45;in/_.xml &#124; /var/www/html/conf &#124; &#124; /conf&#45;in/_.conf|/var/www/html/conf|
-|/lib&#45;in/&#42;.jar &#124; /var/www/html/lib &#124;|
+|@/conf-in/*.xml@|@/var/www/html/conf@|
+|@/conf-in/*.conf@|@/var/www/html/conf@|
+|@/lib-in/*.jar@|@/var/www/html/lib@|
 
 h2(#test). Test
 
