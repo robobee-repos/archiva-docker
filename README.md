@@ -24,6 +24,8 @@
 
 If database type is set to `mysql`:
 
+| Variable | Default | Description |
+| ------------- | ------------- | ----- |
 | DB_NAME | archiva_users | Database name. |
 | DB_USER | archiva | Database user name. |
 | DB_PASSWORD | archiva | Database password. |
