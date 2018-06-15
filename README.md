@@ -19,6 +19,7 @@
 | ------------- | ------------- | ----- |
 | ARCHIVA_REQUEST_LOG_DIR | `/var/log/archiva` | Request log directory. |
 | ARCHIVA_JETTY_LOGS_PATTERN | `request-yyyy_mm_dd.log` | Jetty logs pattern. |
+| ARCHIVA_JETTY_PORT | `8080` | Jetty HTTP port. |
 | JAVA_INITIAL_MEMORY | 500 | Initial Java heap memory. |
 | JAVA_MAX_MEMORY | 500 | Maximum Java heap memory. |
 | JAVA_MAX_PERM_SIZE | 128m | Maximum Java perm memory. |

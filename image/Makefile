@@ -1,6 +1,6 @@
 REPOSITORY := robobeerun
 NAME := archiva
-VERSION ?= v2.2.3-r1
+VERSION ?= v2.2.3-r2
 
 build: _build ##@targets Builds the docker image.
 

@@ -22,6 +22,7 @@ ENV DEBUG="true" \
   ARCHIVA_SOURCE_DIR="/usr/src/archiva" \
   ARCHIVA_REQUEST_LOG_DIR="/var/log/archiva" \
   ARCHIVA_JETTY_LOGS_PATTERN="request-yyyy_mm_dd.log" \
+  ARCHIVA_JETTY_PORT="8080" \
   JAVA_INITIAL_MEMORY="500" \
   JAVA_MAX_MEMORY="500" \
   JAVA_MAX_PERM_SIZE="128m" \

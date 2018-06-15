@@ -68,7 +68,7 @@ cat > "${JETTY_XML_FILE}" <<EOF
       <Arg>
           <New class="org.eclipse.jetty.server.nio.SelectChannelConnector">
             <Set name="host"><SystemProperty name="jetty.host"/></Set>
-            <Set name="port"><SystemProperty name="jetty.port" default="8080"/></Set>
+            <Set name="port"><SystemProperty name="jetty.port" default="${ARCHIVA_JETTY_PORT}"/></Set>
             <Set name="maxIdleTime">30000</Set>
             <Set name="Acceptors">2</Set>
             <Set name="statsOn">false</Set>
