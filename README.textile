@@ -20,6 +20,7 @@ h2(#environment-parameters). Environment Parameters
 |_. Variable|_. Default|_. Description|
 |ARCHIVA&#95;REQUEST&#95;LOG&#95;DIR|@/var/log/archiva@|Request log directory.|
 |ARCHIVA&#95;JETTY&#95;LOGS&#95;PATTERN|@request-yyyy_mm_dd.log@|Jetty logs pattern.|
+|ARCHIVA&#95;JETTY&#95;PORT|@8080@|Jetty HTTP port.|
 |JAVA&#95;INITIAL&#95;MEMORY|500|Initial Java heap memory.|
 |JAVA&#95;MAX&#95;MEMORY|500|Maximum Java heap memory.|
 |JAVA&#95;MAX&#95;PERM&#95;SIZE|128m|Maximum Java perm memory.|
